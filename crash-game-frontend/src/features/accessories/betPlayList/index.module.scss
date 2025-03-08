@@ -1,0 +1,62 @@
+@use "@styles/mixin" as *;
+
+.body {
+  gap: 16px;
+  box-shadow: 0.5px 1px 0 0px inset black;
+  overflow-y: auto;
+  @include mdPadding;
+  @include flexCol;
+
+  .title {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 8px;
+    align-items: center;
+
+    h3 {
+      font-family: "MS Sans Serif Bold";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 36px;
+      text-transform: uppercase;
+    }
+  }
+
+  .wrapper {
+    gap: 16px;
+    overflow-y: auto;
+    @include flexCol;
+
+    .header {
+      display: grid;
+      grid-template-columns: 1fr repeat(3, minmax(60px, 72px));
+      padding: 0 12px;
+      gap: 8px;
+
+      & > span {
+        font-family: Saira;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.15px;
+      }
+
+      & > span:last-child {
+        justify-self: end;
+      }
+    }
+
+    .border {
+      width: 100%;
+      height: 1px;
+      background-color: #1c1b20;
+    }
+
+    .list {
+      gap: 8px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @include flexCol;
+    }
+  }
+}

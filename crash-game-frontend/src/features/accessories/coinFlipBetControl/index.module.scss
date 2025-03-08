@@ -1,0 +1,208 @@
+@use "@styles/mixin" as *;
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "coincontrol coincontrol" "betamount coinside" "startbtn startbtn";
+  gap: 24px;
+  margin: auto;
+
+  h3 {
+    font-family: "MS Sans Serif Bold";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .coinControl {
+    grid-area: coincontrol;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 16px;
+    grid-column-gap: 8px;
+
+    .ranger {
+      border-radius: 8px;
+      border: 1px solid black;
+      padding: 16px;
+      background: white;
+
+      &.disable {
+        background: #eee;
+      }
+
+      & > span {
+        font-family: "MS Sans Serif Bold";
+      }
+    }
+
+    .selector {
+      position: relative;
+      border-radius: 8px;
+      border: 1px solid black;
+      padding: 16px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      span {
+        font-family: Saira;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 25.18px;
+        text-align: left;
+      }
+    }
+
+    .checker {
+      width: fit-content;
+      margin-left: 12px;
+    }
+  }
+
+  .betAmount,
+  .coinSide {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 8px;
+  }
+
+  .betAmount {
+    grid-area: betamount;
+    .inputPanel {
+      width: inherit;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid black;
+
+      display: grid;
+      grid-template-columns: 1fr 40px;
+
+      gap: 8px;
+      background-color: white;
+
+      & > input {
+        outline: none;
+        border: none;
+        font-family: Saira;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+      }
+    }
+
+    .btnGroup {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      width: 305px;
+
+      .button {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: inset 0 0 0 1px black;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .coinSide {
+    grid-area: coinside;
+    .selectType {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+
+      .flipButton {
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        @include flexCol;
+
+        cursor: pointer;
+
+        border-radius: 4px;
+        border: 1px solid black;
+        background-color: #f8f8f8;
+        box-shadow: 1.5px 1.5px 0 0 black;
+        transition: all 0.1s ease-in-out;
+
+        img {
+          width: 50px;
+          aspect-ratio: 1/1;
+        }
+
+        span {
+          text-transform: uppercase;
+          font-family: Manrope;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+        }
+
+        &:hover {
+          background-color: #e8e8e8;
+        }
+
+        &:not(.active):active {
+          transform: translate(1.5px, 1.5px);
+        }
+
+        &.active {
+          background-color: #ffedc2;
+          box-shadow: 2.5px 2.5px 0 0 inset black;
+        }
+
+        &.active:hover {
+          background-color: #ebd49f;
+        }
+
+        &.active:active {
+          transform: translate(1.5px, 1.5px);
+        }
+
+        &:active {
+          box-shadow: 0 0 0 0;
+        }
+      }
+    }
+  }
+
+  .startBtn {
+    grid-area: startbtn;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px inset black;
+    background-color: #f7405e;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    color: #fff;
+    font-family: "MS Sans Serif Bold";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: center;
+    width: 350px;
+    justify-self: center;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,121 @@
+@use "@styles/mixin" as *;
+
+.body {
+  background-color: hsla(43, 100%, 88%, 1);
+  height: 74px;
+  width: 100%;
+  box-shadow: inset 0 -1px 0 0 black;
+
+  .wrapper {
+    height: inherit;
+    @include MainContainer;
+    @include MainGrid;
+
+    .logo {
+      box-shadow: inset -1px 0 0 0 black;
+      display: grid;
+      place-items: center;
+
+      &_full {
+        height: 64px;
+
+        @include breakpoint("md") {
+          display: none;
+        }
+      }
+
+      &_mini {
+        display: none;
+        height: 32px;
+
+        @include breakpoint("md") {
+          display: block;
+        }
+      }
+    }
+
+    .group {
+      justify-content: space-between;
+      padding-right: 24px;
+      @include flexAlignCenter;
+
+      .links {
+        @include flexAlignCenter;
+      }
+
+      .infoGroup {
+        gap: 16px;
+        @include flexAlignCenter;
+
+        .balance {
+          gap: 8px;
+          padding: 6px;
+          background-color: white;
+          border: 1px solid black;
+          @include flexAlignCenter;
+
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "MS Sans Serif Bold";
+            width: 76px;
+          }
+        }
+
+        .user {
+          gap: 12px;
+          position: relative;
+          cursor: pointer;
+          @include flexAlignCenter;
+
+          .dropMenu {
+            position: absolute;
+            width: 100%;
+            border-radius: 6px;
+            background-color: #80eed3;
+            border: 1px solid black;
+            top: 44px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 8px;
+            z-index: 1000;
+
+            .menuItem {
+              justify-content: center;
+              padding: 4px;
+              font-size: 14px;
+              font-family: "MS Sans Serif Bold";
+              font-weight: 400;
+            }
+          }
+
+          .avatar {
+            width: 36px;
+            aspect-ratio: 1/1;
+            background-color: white;
+            display: flex;
+          }
+
+          .name {
+            display: flex;
+            flex-direction: column;
+
+            p {
+              font-size: 16px;
+              font-family: "MS Sans Serif Bold";
+              font-weight: 400;
+            }
+
+            span {
+              font-size: 14px;
+              line-height: 20px;
+              font-family: "Saira";
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

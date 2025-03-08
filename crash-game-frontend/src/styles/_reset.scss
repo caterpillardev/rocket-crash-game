@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  padding-left: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 10px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffedc2;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff1c2;
+}

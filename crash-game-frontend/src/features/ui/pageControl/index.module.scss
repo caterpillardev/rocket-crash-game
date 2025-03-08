@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 2px;
+
+  button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;
+
+    &:hover {
+      filter: drop-shadow(1px 1px 0px #000);
+    }
+  }
+}
+
+.active {
+  color: red;
+}

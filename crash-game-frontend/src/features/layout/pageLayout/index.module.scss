@@ -1,0 +1,13 @@
+@use "@styles/mixin" as *;
+
+.body {
+  .wrapper {
+    position: relative;
+    @include MainContainer;
+    @include MainGrid;
+
+    &.active {
+      @include BodyGrid;
+    }
+  }
+}

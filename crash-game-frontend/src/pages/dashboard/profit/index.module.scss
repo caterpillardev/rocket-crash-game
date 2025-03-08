@@ -1,0 +1,83 @@
+@use "@styles/mixin" as *;
+
+@mixin mainFlex {
+  gap: 16px;
+  @include flexCol;
+}
+
+.body {
+  background-color: #f8f8f8;
+  gap: 24px;
+  height: calc(100vh - 74px);
+  overflow-y: auto;
+  @include mdPadding;
+  @include flexCol;
+
+  & > .header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  h3 {
+    font-family: "MS Sans Serif Bold";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  .casino {
+    @include mainFlex;
+
+    .btnGroup {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: inherit;
+    }
+  }
+
+  .mini {
+    @include mainFlex;
+
+    .btnGroup {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: inherit;
+    }
+  }
+
+  .transactions {
+    @include mainFlex;
+
+    & > .wrapper {
+      @include mainFlex;
+
+      & > .header {
+        display: grid;
+        grid-template-columns:
+          minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px)
+          minmax(auto, 100px) minmax(auto, 120px);
+        gap: 8px;
+        padding: 0 12px;
+
+        span {
+          font-family: "Saira";
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 0.15px;
+
+          &:last-child {
+            text-align: end;
+          }
+        }
+      }
+
+      .list {
+        gap: 8px;
+        @include flexCol;
+      }
+    }
+  }
+}

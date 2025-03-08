@@ -1,0 +1,62 @@
+.body {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 8px;
+  max-width: 405px;
+
+  h3 {
+    text-align: center;
+    font-family: "MS Sans Serif Bold";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .inputPanel {
+    width: inherit;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid black;
+
+    display: grid;
+    grid-template-columns: 25px auto 25px;
+
+    gap: 8px;
+    background-color: white;
+
+    & > span {
+      font-family: Manrope;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+
+    & > input {
+      outline: none;
+      border: none;
+      text-align: center;
+      font-family: Saira;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+
+    & > img {
+      width: 20px;
+    }
+  }
+
+  .btnGroup {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    width: 405px;
+  }
+}

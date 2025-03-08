@@ -1,0 +1,116 @@
+@use "@styles/mixin" as *;
+
+.body {
+  position: relative;
+  z-index: 999;
+  box-shadow: inset 0px -2px 0px 1px black;
+  height: calc(100vh - 74px);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  @include breakpoint("xl") {
+    box-shadow: inset 1px -2px 0px 0px black;
+  }
+
+  @include breakpoint("lg") {
+    position: fixed;
+    background-color: white;
+    right: 20px;
+    min-height: auto;
+    height: 400px;
+    bottom: 20px;
+    border: 1px solid black;
+    box-shadow: 1px 3px 8px 0px black;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid black;
+    @include smPadding;
+
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Manrope";
+      line-height: 22px;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+
+    .count {
+      color: hsla(356, 100%, 76%, 1);
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -4px;
+        transform: translate(-100%, -50%);
+        width: 6px;
+        height: 6px;
+        background-color: hsla(356, 100%, 76%, 1);
+      }
+    }
+  }
+
+  .list {
+    gap: 16px;
+    border-bottom: 1px solid black;
+    overflow-y: auto;
+    @include flexCol;
+    @include smPadding;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: auto calc(100% - 56px) auto;
+    align-items: center;
+    gap: 8px;
+    background-color: hsla(0, 0%, 97%, 1);
+    max-width: 248px;
+    margin-left: 1px;
+    @include smPadding;
+
+    @include breakpoint("xl") {
+      max-width: 249px;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      color: hsla(214, 14%, 41%, 1);
+      font-family: "Saira";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      background: transparent;
+
+      &:focus {
+        outline: 1px solid hsla(214, 14%, 41%, 1);
+        border-radius: 2px;
+      }
+    }
+    .sendButton {
+      cursor: pointer;
+    }
+  }
+}
+
+.miniButton {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid black;
+  padding: 16px;
+  @include flexCenter;
+}

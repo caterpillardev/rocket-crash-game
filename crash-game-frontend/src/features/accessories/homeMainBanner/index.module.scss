@@ -1,0 +1,61 @@
+@use "@styles/mixin" as *;
+
+.body {
+  width: 100%;
+  min-height: 253px;
+  background-color: hsla(283, 100%, 25%, 1);
+  padding: 38px 32px 24px;
+  display: grid;
+  grid-template-columns: minmax(300px, 503px) auto;
+  position: relative;
+  overflow: hidden;
+
+  .firstBG {
+    position: absolute;
+    inset: 0;
+    // mask-image: url("./mask_1.png");
+    // -webkit-mask-image: url("./mask_1.png");
+    background-color: #a231b488;
+    -webkit-mask-repeat: repeat-x;
+    -webkit-mask-position-y: 70px;
+  }
+
+  .secondBG {
+    position: absolute;
+    inset: 0;
+    // mask-image: url("./mask_1.png");
+    // -webkit-mask-image: url("./mask_1.png");
+    background-color: #f488d332;
+    -webkit-mask-repeat: repeat-x;
+    -webkit-mask-position-y: 170px;
+  }
+
+  .adver {
+    color: white;
+    position: relative;
+    z-index: 5;
+    @include flexCol;
+
+    h2 {
+      font-family: "MS Sans Serif Bold";
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: "Saira";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      margin-top: 8px;
+    }
+
+    .button {
+      margin-top: 24px;
+      display: flex;
+    }
+  }
+}

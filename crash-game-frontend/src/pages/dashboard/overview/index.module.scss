@@ -1,0 +1,11 @@
+@use "@styles/mixin" as *;
+
+.body {
+  background-color: #f8f8f8;
+  gap: 16px;
+  height: calc(100vh - 74px);
+  overflow-y: auto;
+  padding-bottom: 0px !important;
+  @include mdPadding;
+  @include flexCol;
+}

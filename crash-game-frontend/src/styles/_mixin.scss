@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "MS Sans Serif Bold";
+  src: url("/MS Sans Serif Bold.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MS Sans Serif 1";
+  src: url("/ms-sans-serif-1.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$breakpoints: (
+  "xxm": 360px,
+  "xm": 540px,
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1280px,
+  "xl": 1440px,
+  "xxl": 1920px,
+);
+
+@mixin breakpoint($name) {
+  @media (max-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin MainContainer {
+  margin: auto;
+  max-width: 1440px;
+}
+
+@mixin MainGrid {
+  display: grid;
+  grid-template-columns: minmax(100px, 250px) auto;
+
+  @include breakpoint("md") {
+    grid-template-columns: 60px auto;
+  }
+}
+
+@mixin BodyGrid {
+  display: grid;
+  grid-template-columns: minmax(100px, 250px) auto minmax(100px, 250px);
+
+  @include breakpoint("lg") {
+    grid-template-columns: minmax(100px, 250px) auto;
+  }
+
+  @include breakpoint("md") {
+    grid-template-columns: 60px auto;
+  }
+}
+
+@mixin flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexCenter {
+  @include flexAlignCenter;
+  justify-content: center;
+}
+
+@mixin smPadding {
+  padding: 16px;
+
+  @include breakpoint("md") {
+    padding: 9px;
+  }
+}
+
+@mixin mdPadding {
+  padding: 32px;
+}

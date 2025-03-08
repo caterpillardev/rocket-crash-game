@@ -1,0 +1,23 @@
+.body {
+  display: grid;
+  grid-template-areas: "balance bonus" "chart chart";
+  gap: 16px;
+
+  .balance {
+    grid-area: balance;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bonus {
+    grid-area: bonus;
+    position: relative;
+    z-index: 2;
+  }
+
+  .chart {
+    grid-area: chart;
+    position: relative;
+    z-index: 1;
+  }
+}

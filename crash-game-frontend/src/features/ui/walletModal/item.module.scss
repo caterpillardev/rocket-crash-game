@@ -1,0 +1,30 @@
+@use "@styles/mixin" as *;
+
+.body {
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 0 0 1px inset black;
+  background-color: white;
+  @include flexCol;
+  align-items: center;
+  gap: 8px;
+
+  .logo {
+    width: 56px;
+    aspect-ratio: 1/1;
+    @include flexCenter;
+
+    & > img {
+      border-radius: 6px;
+      width: 40px;
+    }
+  }
+
+  h4 {
+    font-family: "Manrope";
+    font-size: 20px;
+    line-height: 30px;
+    color: #1e1e1e;
+    font-weight: 500;
+  }
+}

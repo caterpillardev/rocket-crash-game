@@ -1,0 +1,30 @@
+.body {
+  height: 450px;
+  position: relative;
+
+  .mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 24px;
+    width: 106px;
+
+    top: 100px;
+    left: 40px;
+    background-color: white;
+    border-radius: 12px;
+
+    position: absolute;
+    border: 1px solid black;
+
+    span {
+      color: #000;
+      text-align: center;
+      font-family: "MS Sans Serif Bold";
+      font-size: 24px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}

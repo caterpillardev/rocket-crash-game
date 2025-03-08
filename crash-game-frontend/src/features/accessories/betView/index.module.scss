@@ -1,0 +1,78 @@
+@use "@styles/mixin" as *;
+
+.body {
+  height: 100%;
+  // background: #000;
+  position: relative;
+  width: 940px;
+  height: 450px;
+
+  .header {
+    position: absolute;
+    top: 6px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    span {
+      color: #000;
+      font-family: Manrope;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      position: relative;
+      padding-left: 18px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        border-radius: 100%;
+        border: 2px solid black;
+        background-color: #4ac97e;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    .histories {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      .history {
+        padding: 2px 8px;
+        background-color: white;
+        border: 2px solid black;
+
+        color: #5f5f5f;
+        font-family: Manrope;
+      }
+    }
+
+    .btnGroup {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .btn {
+        padding: 0 8px;
+        background-color: #ffedc2;
+        height: 36px;
+        gap: 8px;
+        @include flexAlignCenter;
+
+        p {
+          color: #000;
+          font-family: "MS Sans Serif Bold";
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

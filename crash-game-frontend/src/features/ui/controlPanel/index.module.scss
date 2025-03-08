@@ -1,0 +1,47 @@
+@use "@styles/mixin" as *;
+
+.body {
+  gap: 4px;
+  @include flexCol;
+
+  & > h5 {
+    font-family: "MS Sans Serif 1";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .input {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding: 8px;
+    background-color: hsla(0, 0%, 91%, 1);
+    box-shadow: 0 0 0 1px inset black;
+    font-family: "Manrope";
+
+    input {
+      padding: 0;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      background-color: transparent;
+    }
+
+    & > span {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  .btGroup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+}

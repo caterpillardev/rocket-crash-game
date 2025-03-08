@@ -1,0 +1,41 @@
+@use "@styles/mixin" as *;
+
+.root {
+  padding: 24px;
+  gap: 8px;
+  cursor: pointer;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transition: background-color 0.2s ease-in-out;
+  @include flexAlignCenter;
+
+  span {
+    font-family: "Saira", sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include breakpoint("md") {
+      display: none;
+    }
+  }
+
+  &.active {
+    box-shadow: inset 0 1px 0 0 black, 0 1px 0 0 white;
+    background-color: #f8f8f8;
+  }
+
+  &.right {
+    border-right-color: black;
+  }
+
+  &.both {
+    border-left-color: black;
+    border-right-color: black;
+  }
+
+  &:not(.active):hover {
+    background-color: rgba($color: #000000, $alpha: 0.4);
+  }
+}

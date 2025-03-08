@@ -1,0 +1,23 @@
+@use "@styles/mixin" as *;
+
+.body {
+  background-image: url("/mineBack.webp");
+  background-position: center;
+  position: relative;
+  height: calc(100vh - 74px);
+  overflow-y: auto;
+  gap: 40px;
+  @include flexCol;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    // background-image: url("./mineGround.webp");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 100px;
+  }
+}

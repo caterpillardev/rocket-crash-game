@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  gap: 3px;
+
+  button {
+    width: 22px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+}
+
+.active {
+  background-color: hsl(43, 100%, 88%);
+}

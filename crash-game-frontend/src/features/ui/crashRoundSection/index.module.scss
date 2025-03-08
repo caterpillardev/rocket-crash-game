@@ -1,0 +1,19 @@
+@use "@styles/mixin" as *;
+
+.body {
+  gap: 6px;
+  @include flexCol;
+
+  span {
+    font-family: "MS Sans Serif 1";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .btnGroup {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+}

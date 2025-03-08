@@ -1,0 +1,11 @@
+.body {
+  display: grid;
+  grid-template-rows: 1fr 390px;
+  height: calc(100vh - 74px);
+  overflow-y: auto;
+
+  .control {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+  }
+}
