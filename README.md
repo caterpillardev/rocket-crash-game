@@ -66,6 +66,6 @@ Telegram: [rhettjel](https://t.me/rhettjel) Twitter: [DeFiMaxi](https://x.com/de
 
 ### Clone & Install
 ```sh
-git clone https://github.com/rhettbu/Rocket-Crash-Game.git
+git clone https://github.com/love-luca/Rocket-Crash-Game.git
 cd  
 yarn install
