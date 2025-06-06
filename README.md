@@ -6,7 +6,8 @@
  **A provably fair blockchain casino** featuring **Crash** and **Coin Flip**, built on **Base, Ethereum, and Solana**. Play, win, and withdraw instantly with decentralized smart contracts ensuring transparency.
 
 # contact 
-Telegram: [defai_maxi](https://t.me/defai_maxi) Twitter: [DeFiMaxi](https://x.com/defai_maxi)
+- [Telegram](https://t.me/oxzepdev) 
+- [Twitter](https://x.com/0xzepdev)
 ---
 
 ## Features
