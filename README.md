@@ -6,8 +6,8 @@
  **A provably fair blockchain casino** featuring **Crash** and **Coin Flip**, built on **Base, Ethereum, and Solana**. Play, win, and withdraw instantly with decentralized smart contracts ensuring transparency.
 
 # contact 
-- [Telegram](https://t.me/oxzepdev) 
-- [Twitter](https://x.com/0xzepdev)
+- [Telegram](https://t.me/caterpillardev) 
+- [Twitter](https://x.com/caterpillardev)
 ---
 
 ## Features
